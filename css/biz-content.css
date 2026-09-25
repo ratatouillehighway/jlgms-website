@@ -1,0 +1,75 @@
+/* Business field page — content rebuilt from the JL Global Marine Service brochure. */
+.jl-biz { padding: 70px 0 100px; font-family: "Noto Sans KR", sans-serif; color: #1b2c42; }
+.jl-biz-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+.jl-biz-title { margin: 0 0 14px; font: 600 42px "Barlow Condensed", sans-serif; letter-spacing: .5px; color: #071b31; }
+.jl-biz-lead { margin: 0 0 60px; max-width: 760px; color: #5e6a78; font-size: 15px; line-height: 1.7; }
+
+.jl-biz-section { margin-bottom: 76px; }
+.jl-biz-section:last-child { margin-bottom: 0; }
+.jl-biz-section-title {
+  display: flex; align-items: baseline; gap: 12px;
+  margin: 0 0 10px; padding-bottom: 14px; border-bottom: 2px solid #071b31;
+  font: 600 26px "Noto Sans KR", sans-serif; color: #071b31;
+}
+.jl-biz-section-title span { font: 500 13px "Barlow Condensed", sans-serif; letter-spacing: 1px; color: #8b96a3; text-transform: uppercase; }
+.jl-biz-desc { margin: 0 0 30px; max-width: 820px; color: #5e6a78; font-size: 14px; line-height: 1.7; }
+
+.jl-biz-group-title {
+  display: inline-block; margin: 0 0 16px; padding: 8px 18px;
+  background: linear-gradient(90deg, #0c358f, #6ea8ff);
+  color: #fff; font: 600 14px "Barlow Condensed", sans-serif; letter-spacing: .5px;
+  border-radius: 3px;
+}
+.jl-biz-group-title-lg {
+  display: block; margin: 0 0 28px; padding: 12px 20px;
+  background: #071b31; color: #fff; font: 600 16px "Barlow Condensed", sans-serif;
+  letter-spacing: 1px; border-radius: 3px;
+}
+
+.jl-biz-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 40px; }
+.jl-biz-grid:last-child { margin-bottom: 0; }
+.jl-biz-grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.jl-biz-part { border: 1px solid #e1e5ea; border-radius: 4px; overflow: hidden; background: #fff; }
+.jl-biz-part img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 10px; }
+.jl-biz-part span { display: block; padding: 12px 14px; border-top: 1px solid #e1e5ea; text-align: center; font: 600 13px "Noto Sans KR", sans-serif; color: #071b31; }
+.jl-biz-card { border: 1px solid #e1e5ea; border-radius: 4px; overflow: hidden; background: #fff; }
+.jl-biz-card h5 {
+  margin: 0; padding: 14px 16px; background: #0c358f; color: #fff;
+  font: 600 13px "Noto Sans KR", sans-serif; line-height: 1.4; min-height: 40px;
+}
+.jl-biz-card ul { margin: 0; padding: 14px 16px; list-style: none; }
+.jl-biz-card li { position: relative; padding-left: 12px; margin-bottom: 8px; color: #384657; font-size: 13px; line-height: 1.5; }
+.jl-biz-card li:last-child { margin-bottom: 0; }
+.jl-biz-card li::before { content: "·"; position: absolute; left: 0; color: #0c358f; font-weight: 700; }
+
+.jl-biz-table { border-top: 1px solid #071b31; }
+.jl-biz-row {
+  display: grid; grid-template-columns: 160px 220px 1fr; align-items: center; gap: 20px;
+  padding: 14px 4px; border-bottom: 1px solid #e1e5ea;
+}
+.jl-biz-row img { display: block; width: 160px; height: 112px; object-fit: contain; background: #fff; }
+.jl-biz-row strong { font: 600 14px "Noto Sans KR", sans-serif; color: #071b31; }
+.jl-biz-row span { color: #5e6a78; font-size: 14px; }
+.jl-biz-partners { margin: 24px 0 0; color: #8b96a3; font-size: 13px; line-height: 1.8; }
+
+.jl-biz-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.jl-biz-case {
+  border: 1px solid #e1e5ea; border-radius: 4px; overflow: hidden; background: #fff;
+}
+.jl-biz-case img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #fff; }
+.jl-biz-case span {
+  display: block; padding: 12px 14px; border-top: 1px solid #e1e5ea;
+  text-align: center; font: 500 13px "Noto Sans KR", sans-serif; color: #071b31;
+}
+
+.jl-biz-package { padding: 48px 40px; background: #071b31; border-radius: 6px; }
+.jl-biz-package .jl-biz-section-title { color: #fff; border-bottom-color: rgba(255,255,255,.25); }
+.jl-biz-package .jl-biz-section-title span { color: #7c8fac; }
+.jl-biz-flow { display: flex; align-items: center; justify-content: center; gap: 22px; margin: 30px 0 26px; }
+.jl-biz-step {
+  padding: 22px 30px; border: 1px solid rgba(255,255,255,.3); border-radius: 50px;
+  color: #fff; font: 600 15px "Noto Sans KR", sans-serif;
+}
+.jl-biz-arrow { color: #71dfe3; font: 24px "Barlow Condensed", sans-serif; }
+.jl-biz-tagline { margin: 0; text-align: center; color: #71dfe3; font: 600 20px "Barlow Condensed", sans-serif; letter-spacing: .5px; }

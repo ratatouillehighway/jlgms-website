@@ -1,0 +1,56 @@
+/* Shared header/footer for jlgms/ subpages — matches the new homepage design. */
+.jl-header-wrap, .jl-header-wrap * { box-sizing: border-box; }
+.jl-skip { position: absolute; top: -40px; left: 0; z-index: 6001; padding: 8px 14px; background: #071b31; color: #fff; font-size: 13px; }
+.jl-skip:focus { top: 0; }
+.jl-header-wrap {
+  position: fixed; z-index: 5000; top: 0; left: 0; width: 100%;
+  background: rgba(7,27,49,.96);
+  box-shadow: 0 3px 16px rgba(0,0,0,.15);
+  font-family: "Noto Sans KR", sans-serif;
+}
+.jl-header {
+  height: 99px; max-width: 1680px; margin: 0 auto; padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.jl-logo { display: block; width: 116px; }
+.jl-logo img { display: block; width: 100%; height: auto; }
+.jl-nav { display: flex; }
+.jl-nav > ul { display: flex; padding: 0; margin: 0; list-style: none; }
+.jl-nav > ul > li { position: relative; padding: 0 24px; text-align: center; }
+.jl-nav > ul > li > a {
+  display: block; padding: 10px 0; color: #fff; font: 500 15px/1 "Barlow Condensed", sans-serif; letter-spacing: .5px;
+}
+.jl-nav > ul > li:hover > a { color: #71dfe3; }
+.jl-lnb {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  display: none; min-width: 170px; margin: 0; padding: 14px 0; list-style: none;
+  background: #fff; border-radius: 4px; box-shadow: 0 8px 22px rgba(4,25,48,.18);
+}
+.jl-nav > ul > li:hover .jl-lnb { display: block; }
+.jl-lnb a { display: block; padding: 9px 16px; color: #5e6a78; font: 400 13px "Noto Sans KR", sans-serif; white-space: nowrap; }
+.jl-lnb a:hover { color: #2b47ee; font-weight: 600; }
+.jl-language { display: flex; align-items: center; gap: 8px; color: #fff; font: 600 12px "Barlow Condensed", sans-serif; letter-spacing: 1.5px; }
+.jl-language button { padding: 0; border: 0; background: transparent; color: inherit; opacity: .5; cursor: pointer; font: inherit; }
+.jl-language button.is-active, .jl-language button:hover { opacity: 1; }
+.jl-language span { opacity: .4; }
+
+.jl-footer {
+  color: #98a4b0; background: #071b31; padding: 40px 0; font: 400 13px "Noto Sans KR", sans-serif;
+}
+.jl-footer-inner {
+  max-width: 1620px; margin: 0 auto; padding: 0 40px;
+  display: flex; align-items: center; gap: 40px;
+}
+.jl-footer-inner img { width: 100px; }
+.jl-footer-inner address { font-style: normal; margin: 0 0 10px; color: #98a4b0; }
+.jl-footer-inner p { margin: 0; color: #98a4b0; }
+.jl-copyright { margin-left: auto; font: 12px "Barlow Condensed", sans-serif; letter-spacing: .8px; color: #98a4b0; }
+
+/* The old AOS scroll-reveal library keeps content invisible/shifted until the
+   page is scrolled, so section content appears blank on load. Show everything
+   immediately instead of waiting for a scroll to trigger the fade-in. */
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
