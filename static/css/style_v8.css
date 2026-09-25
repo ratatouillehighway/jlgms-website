@@ -555,15 +555,15 @@ text-transform: uppercase;
   height: 100%;
 }
 .vision .slide1 {
-  background: url("../../jlgms-assets/static/img/sub/sub1/slide1.png") no-repeat center;
+  background: url("../../jlgms-assets/static/img/sub/sub1/slide1.jpg") no-repeat center;
   background-size: cover;
 }
 .vision .slide2 {
-  background: url("../../jlgms-assets/static/img/sub/sub1/slide2.png") no-repeat center;
+  background: url("../../jlgms-assets/static/img/sub/sub1/slide2.jpg") no-repeat center;
   background-size: cover;
 }
 .vision .slide3 {
-  background: url("../../jlgms-assets/static/img/sub/sub1/slide3.png") no-repeat center;
+  background: url("../../jlgms-assets/static/img/sub/sub1/slide3.jpg") no-repeat center;
   background-size: cover;
 }
 .vision .control {
