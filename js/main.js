@@ -22,11 +22,20 @@ function applyLanguage(language) {
     metaDescription.content = isEnglish ? metaDescription.dataset.en : metaDescription.dataset.ko;
   }
   languageButtons.forEach((item) => item.classList.toggle('is-active', item.dataset.language === language));
-  localStorage.setItem('jl-language', language);
 }
 
-languageButtons.forEach((button) => button.addEventListener('click', () => applyLanguage(button.dataset.language)));
-applyLanguage(localStorage.getItem('jl-language') === 'ENG' ? 'ENG' : 'KOR');
+function readLanguage() {
+  try { return localStorage.getItem('jl-language') === 'ENG' ? 'ENG' : 'KOR'; } catch (e) { return 'KOR'; }
+}
+
+languageButtons.forEach((button) => button.addEventListener('click', () => {
+  try { localStorage.setItem('jl-language', button.dataset.language); } catch (e) {}
+  applyLanguage(button.dataset.language);
+}));
+// Back/forward restores a cached page without re-running scripts, and other tabs may have switched language.
+window.addEventListener('pageshow', () => applyLanguage(readLanguage()));
+window.addEventListener('storage', (e) => { if (e.key === 'jl-language') applyLanguage(readLanguage()); });
+applyLanguage(readLanguage());
 
 function showSlide(index) {
   activeSlide = index;

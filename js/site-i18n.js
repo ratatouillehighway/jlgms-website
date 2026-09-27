@@ -1,8 +1,13 @@
 (function () {
+  var STORAGE_KEY = 'jl-language';
   var translatableEls = [].slice.call(document.querySelectorAll('[data-en]'));
   var languageButtons = [].slice.call(document.querySelectorAll('[data-language]'));
 
-  function applyLanguage(language) {
+  function readLanguage() {
+    try { return localStorage.getItem(STORAGE_KEY) === 'ENG' ? 'ENG' : 'KOR'; } catch (e) { return 'KOR'; }
+  }
+
+  function render(language) {
     var isEnglish = language === 'ENG';
     document.documentElement.lang = isEnglish ? 'en' : 'ko';
     translatableEls.forEach(function (el) {
@@ -12,14 +17,18 @@
     languageButtons.forEach(function (item) {
       item.classList.toggle('is-active', item.dataset.language === language);
     });
-    localStorage.setItem('jl-language', language);
   }
 
   languageButtons.forEach(function (button) {
     button.addEventListener('click', function () {
-      applyLanguage(button.dataset.language);
+      try { localStorage.setItem(STORAGE_KEY, button.dataset.language); } catch (e) {}
+      render(button.dataset.language);
     });
   });
 
-  applyLanguage(localStorage.getItem('jl-language') === 'ENG' ? 'ENG' : 'KOR');
+  // Back/forward restores a cached page without re-running scripts, and other tabs may have switched language.
+  window.addEventListener('pageshow', function () { render(readLanguage()); });
+  window.addEventListener('storage', function (e) { if (e.key === STORAGE_KEY) render(readLanguage()); });
+
+  render(readLanguage());
 })();
