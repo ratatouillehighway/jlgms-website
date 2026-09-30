@@ -1,0 +1,19 @@
+/* All Korean Ports map: the port names baked into the image were erased, and each port is an HTML
+   label (with its own pin) laid over the old pin + label box, so names follow the KOR/ENG switch.
+   Positions are percentages of the 1100x1090 image; sizes are in cqw so everything scales with the map. */
+.jl-ports-map { position: relative; width: 100%; max-width: 1100px; margin: 0 auto; container-type: inline-size; }
+.jl-ports-map img { display: block; width: 100%; height: auto; }
+.jl-ports-map ul { margin: 0; padding: 0; list-style: none; }
+.jl-ports-map li {
+  position: absolute; left: var(--x); transform: translateY(-50%);
+  display: flex; align-items: center; height: 3.7cqw; padding: 0 1.4cqw 0 4cqw; border-radius: .9cqw;
+  background: #f4f7fb url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 0C4.5 0 0 4.4 0 9.8 0 17 10 28 10 28s10-11 10-18.2C20 4.4 15.5 0 10 0z' fill='%2310218B'/%3E%3Ccircle cx='10' cy='9.6' r='3.6' fill='%23fff'/%3E%3C/svg%3E") no-repeat 1.2cqw 50% / 1.8cqw 2.6cqw;
+  box-shadow: 0 1px 3px rgba(7, 27, 49, .12);
+  font: 600 1.6cqw/1 "Noto Sans KR", sans-serif; color: #111; white-space: nowrap;
+}
+.jl-ports-map li.is-hq {
+  background-color: #fde8e8; color: #e0201b;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 0C4.5 0 0 4.4 0 9.8 0 17 10 28 10 28s10-11 10-18.2C20 4.4 15.5 0 10 0z' fill='%23e0201b'/%3E%3Ccircle cx='10' cy='9.6' r='3.6' fill='%23fff'/%3E%3C/svg%3E");
+}
+/* English names are longer: slightly smaller text, and Samcheonpo moves right to clear Gwangyang. */
+html[lang="en"] .jl-ports-map li { left: var(--x-en, var(--x)); font-size: 1.4cqw; }

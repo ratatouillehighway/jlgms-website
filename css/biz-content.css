@@ -43,16 +43,6 @@
 .jl-biz-card li:last-child { margin-bottom: 0; }
 .jl-biz-card li::before { content: "·"; position: absolute; left: 0; color: #0c358f; font-weight: 700; }
 
-.jl-biz-table { border-top: 1px solid #071b31; }
-.jl-biz-row {
-  display: grid; grid-template-columns: 160px 220px 1fr; align-items: center; gap: 20px;
-  padding: 14px 4px; border-bottom: 1px solid #e1e5ea;
-}
-.jl-biz-row img { display: block; width: 160px; height: 112px; object-fit: contain; background: #fff; }
-.jl-biz-row strong { font: 600 14px "Noto Sans KR", sans-serif; color: #071b31; }
-.jl-biz-row span { color: #5e6a78; font-size: 14px; }
-.jl-biz-partners { margin: 24px 0 0; color: #8b96a3; font-size: 13px; line-height: 1.8; }
-
 .jl-biz-grid-4 { grid-template-columns: repeat(4, 1fr); }
 .jl-biz-case {
   border: 1px solid #e1e5ea; border-radius: 4px; overflow: hidden; background: #fff;

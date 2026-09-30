@@ -24,7 +24,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <!--메타-->
-    <meta name="description" content="엔진부품, 선박 기자재, 선용, 고무 매트, 윤활유, 선박유, 산업유, 고객이 선호하는 동 업종 최고의 기업, 고객만족경영">
+    <meta name="description" content="엔진부품, 선박 기자재, 선용, 윤활유, 선박유, 산업유, 고객이 선호하는 동 업종 최고의 기업, 고객만족경영">
     <meta name="keywords" content="엔진부품,윤활유,선박유,산업유">
 
     <meta property="og:type" content="website">
@@ -37,7 +37,7 @@
 
     <meta property="twitter:card" content="summary">
     <meta property="twitter:title" content="JL Global Marine Service">
-    <meta property="twitter:description" content="엔진부품, 선박 기자재, 선용, 고무 매트, 윤활유, 선박유, 산업유, 고객이 선호하는 동 업종 최고의 기업, 고객만족경영">
+    <meta property="twitter:description" content="엔진부품, 선박 기자재, 선용, 윤활유, 선박유, 산업유, 고객이 선호하는 동 업종 최고의 기업, 고객만족경영">
     <meta property="twitter:image" content="../../static/img/common/thumb.jpg">
     <meta property="twitter:image:type" content="image/jpeg">
     <meta property="twitter:image:width" content="600">
@@ -70,12 +70,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../css/site-header.css">
+    <link rel="stylesheet" type="text/css" href="../../css/ports-map.css">
 </head>
 
 <body onselectstart="return false" ondragstart="return false" oncontextmenu="return false">
 <!-- header -->
 <div class="jl-header-wrap" id="header">
-    <a class="jl-skip" href="#Main">본문 바로가기</a>
+    <a class="jl-skip" href="#Main" data-en="Skip to content">본문 바로가기</a>
     <div class="jl-header">
         <a class="jl-logo" href="../../index.html"><img src="../../assets/logo.png" alt="JL Global Marine Service"></a>
         <nav class="jl-nav" aria-label="주요 메뉴">
@@ -128,15 +129,15 @@
                   <ul class="option over-option">
                       
                           <li >
-                              <a href="../company/ceo.html">회사소개</a>
+                              <a href="../company/ceo.html" data-en="Company">회사소개</a>
                           </li>
                       
                           <li class="selected">
-                              <a href="../business/business-field.html">사업분야</a>
+                              <a href="../business/business-field.html" data-en="Business Fields">사업분야</a>
                           </li>
                       
                           <li >
-                              <a href="../customer/quote.html">고객지원</a>
+                              <a href="../customer/quote.html" data-en="Support">고객지원</a>
                           </li>
                       
                           <li >
@@ -158,27 +159,27 @@
                   <ul class="option over-option">
                       
                            <li >
-                               <a href="../business/business-field.html">사업분야</a>
+                               <a href="../business/business-field.html" data-en="Business Fields">사업분야</a>
                            </li>
                        
                            <li >
-                               <a href="../business/engine/enginecomponents.html">엔진부품</a>
+                               <a href="../business/engine/enginecomponents.html" data-en="Engine Parts">엔진부품</a>
                            </li>
                        
                            <li >
-                               <a href="../business/vessel.html">선박 기자재</a>
+                               <a href="../business/vessel.html" data-en="Marine Equipment">선박 기자재</a>
                            </li>
                        
                            <li class="selected">
-                               <a href="ship-stores11.html">선용</a>
+                               <a href="ship-stores11.html" data-en="Ship Stores">선용</a>
                            </li>
                        
                            <li >
-                               <a href="../lubricant/lubricatingoil.html">윤활유</a>
+                               <a href="../lubricant/lubricatingoil.html" data-en="Lubricants">윤활유</a>
                            </li>
                        
                            <li >
-                               <a href="../business/technical-services.html">기술용역</a>
+                               <a href="../business/technical-services.html" data-en="Technical Services">기술용역</a>
                            </li>
                        
                   </ul>
@@ -192,7 +193,7 @@
                        
                           
                             <li class="selected">
-                                <a href="ship-stores11.html">선용</a>
+                                <a href="ship-stores11.html" data-en="Ship Stores">선용</a>
                             </li>
                           
                        
@@ -212,7 +213,7 @@
                 
                     
                         <li class="active">
-                            <a href="ship-stores11.html">선용</a>
+                            <a href="ship-stores11.html" data-en="Ship Stores">선용</a>
                         </li>
                     
                 
@@ -549,8 +550,22 @@
 
                 <article class="article">
                     <span class="point-tit" data-aos="fade-up">All Korean Ports</span>
-                    <div class="full" data-aos="fade-up">
-                        <img src="../../jlgms-assets/static/img/sub/sub2/map.png" alt="map">
+                    <div class="full jl-ports-map" data-aos="fade-up">
+                        <img src="../../assets/korea-ports-map.png" alt="">
+                        <ul>
+                            <li style="--x:24.7%;top:23.1%" data-en="Incheon/Pyeongtaek">인천/평택</li>
+                            <li style="--x:65.7%;top:23.3%" data-en="Donghae">동해</li>
+                            <li style="--x:23.4%;top:36.2%" data-en="Dangjin">당진</li>
+                            <li style="--x:69.7%;top:55.6%" data-en="Pohang">포항</li>
+                            <li class="is-hq" style="--x:69.9%;top:65.4%" data-en="Ulsan">울산</li>
+                            <li style="--x:21.4%;top:70.9%" data-en="Daesan">대산</li>
+                            <li style="--x:68.0%;top:71.3%" data-en="Busan">부산</li>
+                            <li style="--x:64.7%;top:75.4%" data-en="Busan New Port">부산신항</li>
+                            <li style="--x:43.3%;top:78.1%" data-en="Gwangyang">광양</li>
+                            <li style="--x:52.5%;top:78.1%;--x-en:55.7%" data-en="Samcheonpo">삼천포</li>
+                            <li style="--x:20.6%;top:78.8%" data-en="Mokpo">목포</li>
+                            <li style="--x:42.2%;top:82.1%" data-en="Yeosu">여수</li>
+                        </ul>
                     </div>
                 </article>
             </div>
@@ -573,7 +588,7 @@
     </div>
 </footer>
 
-<script src="../../js/site-i18n.js?v=3"></script>
+<script src="../../js/site-i18n.js?v=4"></script>
 </body>
 
 <!-- Mirrored from http://www.jlgms.co.kr/jlgms/ship-stores/ship-stores11 by HTTrack Website Copier/3.x [XR&CO], Thu, 24 Sep 2026 13:59:10 GMT -->

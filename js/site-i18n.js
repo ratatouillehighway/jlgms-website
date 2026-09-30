@@ -14,6 +14,12 @@
       if (!el.dataset.ko) el.dataset.ko = el.textContent;
       el.textContent = isEnglish ? el.dataset.en : el.dataset.ko;
     });
+    // Sub-nav dropdown buttons show a copy of the selected option's label.
+    [].forEach.call(document.querySelectorAll('.select-box'), function (box) {
+      var selected = box.querySelector('.option .selected');
+      var label = box.querySelector('.select');
+      if (selected && label) label.textContent = selected.textContent.trim();
+    });
     languageButtons.forEach(function (item) {
       item.classList.toggle('is-active', item.dataset.language === language);
     });
