@@ -55,3 +55,7 @@
   transform: none !important;
   transition: none !important;
 }
+.jl-footer-inner a { color: #71dfe3; text-decoration: none; }
+.jl-footer-inner a:hover, .footer a:hover { text-decoration: underline; }
+.footer-sep { margin: 0 12px; opacity: .35; }
+.footer-item { white-space: nowrap; }
