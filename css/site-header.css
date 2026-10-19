@@ -24,7 +24,7 @@
 .jl-lnb {
   position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
   display: none; min-width: 170px; margin: 0; padding: 14px 0; list-style: none;
-  background: rgba(7,27,49,.78); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  background: rgba(7,27,49,.45); -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px);
   border: 1px solid rgba(255,255,255,.12); border-radius: 4px; box-shadow: 0 8px 24px rgba(0,0,0,.25);
 }
 .jl-nav > ul > li:hover .jl-lnb { display: block; }
