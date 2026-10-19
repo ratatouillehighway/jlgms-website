@@ -24,11 +24,12 @@
 .jl-lnb {
   position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
   display: none; min-width: 170px; margin: 0; padding: 14px 0; list-style: none;
-  background: #fff; border-radius: 4px; box-shadow: 0 8px 22px rgba(4,25,48,.18);
+  background: rgba(7,27,49,.78); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,.12); border-radius: 4px; box-shadow: 0 8px 24px rgba(0,0,0,.25);
 }
 .jl-nav > ul > li:hover .jl-lnb { display: block; }
-.jl-lnb a { display: block; padding: 9px 16px; color: #5e6a78; font: 400 13px "Noto Sans KR", sans-serif; white-space: nowrap; }
-.jl-lnb a:hover { color: #2b47ee; font-weight: 600; }
+.jl-lnb a { display: block; padding: 9px 16px; color: rgba(255,255,255,.75); font: 400 13px "Noto Sans KR", sans-serif; white-space: nowrap; }
+.jl-lnb a:hover { color: #71dfe3; font-weight: 600; }
 .jl-language { display: flex; align-items: center; gap: 8px; color: #fff; font: 600 12px "Barlow Condensed", sans-serif; letter-spacing: 1.5px; }
 .jl-language button { padding: 0; border: 0; background: transparent; color: inherit; opacity: .5; cursor: pointer; font: inherit; }
 .jl-language button.is-active, .jl-language button:hover { opacity: 1; }
