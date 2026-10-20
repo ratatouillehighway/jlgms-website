@@ -59,3 +59,42 @@
 .jl-footer-inner a:hover, .footer a:hover { text-decoration: underline; }
 .footer-sep { margin: 0 12px; opacity: .35; }
 .footer-item { white-space: nowrap; }
+
+/* ---------- Tablet and phone: menu collapses behind a button (js/mobile-nav.js) ---------- */
+.menu-toggle { display: none; }
+@media (max-width: 1024px) {
+  .jl-header { height: 64px; padding: 0 12px 0 20px; }
+  .jl-logo { width: 88px; padding: 0; }
+  .jl-language { margin-left: auto; }
+  .menu-toggle {
+    display: flex; flex-direction: column; justify-content: center; gap: 5px;
+    width: 44px; height: 44px; margin-left: 10px; padding: 0 11px; border: 0; background: transparent; cursor: pointer;
+  }
+  .menu-toggle span { display: block; height: 2px; border-radius: 1px; background: #fff; transition: transform .25s, opacity .2s; }
+  .nav-open .menu-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-open .menu-toggle span:nth-child(2) { opacity: 0; }
+  .nav-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .jl-header-wrap.nav-open { background: rgba(7,27,49,.98); }
+  .jl-nav {
+    position: fixed; top: 64px; left: 0; right: 0; height: calc(100vh - 64px); height: calc(100dvh - 64px); display: none;
+    overflow-y: auto; background: #071b31; border-top: 1px solid rgba(255,255,255,.12);
+  }
+  .nav-open .jl-nav { display: block; }
+  .jl-nav > ul { flex-direction: column; padding: 8px 20px 40px; }
+  .jl-nav > ul > li { padding: 0; text-align: left; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .jl-nav > ul > li > a { padding: 18px 0 10px; font: 600 17px/1.3 "Noto Sans KR", sans-serif; letter-spacing: 0; }
+  .jl-lnb, .jl-nav > ul > li:hover .jl-lnb {
+    position: static; display: block; transform: none; min-width: 0; padding: 0 0 14px;
+    background: none; border: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none;
+  }
+  .jl-lnb a { padding: 8px 0 8px 14px; font-size: 15px; }
+  html.nav-locked, html.nav-locked body { overflow: hidden; }
+
+  .jl-footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; padding: 0 20px; }
+  .jl-copyright { margin-left: 0; }
+}
+@media (max-width: 640px) {
+  .jl-footer-inner img { width: 96px; }
+  .jl-footer .footer-sep { display: none; }
+  .jl-footer .footer-item { display: block; line-height: 1.9; }
+}
